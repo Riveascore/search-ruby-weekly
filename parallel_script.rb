@@ -1,3 +1,9 @@
+require 'byebug'
+require 'pry'
+require 'pry-byebug'
+
+
+
 require 'thread'
 require 'rubyweekly_scrapper'
 require 'concurrent'
@@ -60,20 +66,16 @@ require 'concurrent'
 
 @issues = RubyweeklyScrapper.scrap_index("https://rubyweekly.com/issues")
 
-
-# from = Date.new(2016, 1, 1)
-# to = Date.today
- 
 transactions = Concurrent::Array.new
 threads = Concurrent::Array.new
  
-# sliced_array = (from..to).to_a.each_slice(30).to_a
-sliced_array = @issues.each_slice(30).to_a
+sliced_array = @issues.each_slice(10).to_a
 
-sliced_array.map do |issue|
+sliced_array.map do |array_slice|
   threads << Thread.new do
-    # v = get_transactions(dates.min, dates.max)
-    v = RubyweeklyScrapper.scrap_issue(issue.url)
+    v = array_slice.map do |issue|
+      RubyweeklyScrapper.scrap_issue(issue.url)
+    end
     transactions += v
   end
 end
