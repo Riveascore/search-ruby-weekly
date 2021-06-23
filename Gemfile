@@ -7,3 +7,5 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 # gem "rails"
 
 gem 'rubyweekly_scrapper', github: 'ilnurnasyrov/rubyweekly_scrapper'
+
+gem 'concurrent-ruby', require: 'concurrent'

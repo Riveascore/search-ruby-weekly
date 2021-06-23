@@ -8,6 +8,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    concurrent-ruby (1.1.9)
     mini_portile2 (2.5.3)
     nokogiri (1.11.7)
       mini_portile2 (~> 2.5.0)
@@ -18,6 +19,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  concurrent-ruby
   rubyweekly_scrapper!
 
 BUNDLED WITH
