@@ -1,0 +1,38 @@
+GIT
+  remote: https://github.com/ilnurnasyrov/rubyweekly_scrapper
+  revision: 097cc476523eea3bb46d6d77dce98551cac611c0
+  specs:
+    rubyweekly_scrapper (0.1.0)
+      nokogiri (>= 1.8.4)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    byebug (11.1.3)
+    coderay (1.1.3)
+    concurrent-ruby (1.1.9)
+    method_source (1.0.0)
+    mini_portile2 (2.5.3)
+    nokogiri (1.11.7)
+      mini_portile2 (~> 2.5.0)
+      racc (~> 1.4)
+    pry (0.14.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    pry-byebug (3.8.0)
+      byebug (~> 11.0)
+      pry (~> 0.10)
+    racc (1.5.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  byebug
+  concurrent-ruby
+  pry
+  pry-byebug
+  rubyweekly_scrapper!
+
+BUNDLED WITH
+   2.1.4
